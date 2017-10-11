@@ -30,7 +30,7 @@ var dinosaurs = [];
 // 	});
 // };
 
-var firstDinosaurJSON = function(){
+const firstDinosaurJSON = () => {
 	return new Promise(function(resolve, reject){
 		$.ajax('./db/dinosaurs.json').done(function(data1){
 			resolve(data1.dinosaurs1);
@@ -40,7 +40,7 @@ var firstDinosaurJSON = function(){
 	});
 };
 
-var secondDinosaurJSON = function(){
+const secondDinosaurJSON = () => {
 	return new Promise(function(resolve, reject){
 		$.ajax('./db/dinosaurs2.json').done(function(data2){
 			resolve(data2.dinosaurs2);
@@ -50,7 +50,7 @@ var secondDinosaurJSON = function(){
 	});
 };
 
-var thirdDinosaurJSON = function(){
+const thirdDinosaurJSON = () => {
 	return new Promise(function(resolve, reject){
 		$.ajax('./db/dinosaurs3.json').done(function(data3){
 			resolve(data3.dinosaurs3);
@@ -104,8 +104,7 @@ var thirdDinosaurJSON = function(){
 //     });
 // };
 
-
-var dinoGetter = function(){
+const dinoGetter = () => {
 	Promise.all([firstDinosaurJSON(), secondDinosaurJSON(), thirdDinosaurJSON()]).then(function(results){
 		console.log("results from promise.all", results);
 		results.forEach(function(result){
@@ -119,19 +118,17 @@ var dinoGetter = function(){
 	});
 };
 
-
-var makeDinos = function(){
+const makeDinos = () => {
 	dinosaurs.forEach(function(dino){
 		dom(dino);
 	});
 };
 
-
-var initializer = function(){
+const initializer = () => {
 	dinoGetter();
 };
 
-var getDinosaurs = function(){
+const getDinosaurs = () => {
 	return dinosaurs;
 };
 
@@ -152,7 +149,7 @@ module.exports = {initializer:initializer, getDinosaurs:getDinosaurs};
 
 var outputDiv = $('#dinosaur');
 
-var domString = function(dinosaur) {
+const domString = (dinosaur) => {
 	var domStrang = '';
 	domStrang += `<div>`;
 	domStrang +=   `<h1>${dinosaur.type}</h1>`;
@@ -160,7 +157,7 @@ var domString = function(dinosaur) {
 	printToDom(domStrang);
 };
 
-var printToDom = function(strang) {
+const printToDom = (strang) => {
 	outputDiv.append(strang);
 };
 
