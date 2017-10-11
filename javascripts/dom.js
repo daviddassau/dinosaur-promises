@@ -12,7 +12,7 @@
 
 var outputDiv = $('#dinosaur');
 
-var domString = function(dinosaur) {
+const domString = (dinosaur) => {
 	var domStrang = '';
 	domStrang += `<div>`;
 	domStrang +=   `<h1>${dinosaur.type}</h1>`;
@@ -20,7 +20,7 @@ var domString = function(dinosaur) {
 	printToDom(domStrang);
 };
 
-var printToDom = function(strang) {
+const printToDom = (strang) => {
 	outputDiv.append(strang);
 };
 
