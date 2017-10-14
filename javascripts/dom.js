@@ -4,7 +4,7 @@ var outputDiv = $('#dinosaur');
 
 const domString = (dinosaur) => {
 	var domStrang = '';
-	domStrang += `<div class="col-md-4">`;
+	domStrang += `<div>`;
 	domStrang +=   `<h1>${dinosaur.type}</h1>`;
 	domStrang += `<div>`;
 	printToDom(domStrang);
