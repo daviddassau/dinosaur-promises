@@ -5,7 +5,7 @@ var dom = require('./dom');
 var dinosaurs = [];
 
 const firstDinosaurJSON = () => {
-	return new Promise(function(resolve, reject){
+	return new Promise((resolve, reject) => {
 		$.ajax('./db/dinosaurs.json').done((data1) => {
 			resolve(data1.dinosaurs1);
 		}).fail(function(error1){
