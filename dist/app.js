@@ -104,7 +104,7 @@ const domString = (dinosaur) => {
 	  dinosaur.snacks.forEach((cat) => {
 	  	domStrang += `<div class="card">`;
 	  	domStrang += `<h5>${cat.name}</h5>`;
-	  	domStrang += `<div class="card-image">`;
+	  	domStrang += `<div class="card-img">`;
 	  	domStrang +=   `<img src="${cat.imageUrl}">`;
 	  	domStrang += `</div>`;
 	  	domStrang += `<p class="card-description">${cat.specialSkill}</p>`;
