@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'truncate';
 
 .card {
 	transition: box-shadow .25s;
@@ -8,6 +9,10 @@
 	background-color: $neutral-color;
 	color: $dark-text-color;
 	text-align: center;
+
+	.card-description {
+		@include truncate(100px);
+	}
 
 	.card-img {
 		position: relative;
